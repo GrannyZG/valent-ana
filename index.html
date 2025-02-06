@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sretno Valentinovo</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            padding: 20px;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #ff4d4d;
+            animation: bounce 1.5s infinite alternate;
+        }
+
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+
+        .gallery-wrapper {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            width: 100%;
+        }
+
+        .gallery {
+            display: flex;
+            animation: scrollGallery 30s linear infinite;
+        }
+
+        .gallery img {
+            width: 600px;
+            height: 600px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        @keyframes scrollGallery {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        .moon-phases img {
+            width: 200px;
+            height: auto;
+            margin: 10px;
+        }
+
+        .counter {
+            font-size: 1.5em;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .love-text {
+            font-size: 1.2em;
+            color: #cc0000;
+            max-width: 600px;
+            margin: 20px auto;
+            line-height: 1.5;
+        }
+
+        .final-message {
+            margin-top: 30px;
+            font-style: italic;
+            font-size: 1.2em;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const currentDate = new Date();
+            const unlockDate = new Date("2025-02-14T00:00:00");
+            
+            // Dodaj player za glazbu koji uvijek radi
+            const audio = document.createElement("audio");
+            audio.src = "/img/rivers.mp3";
+            audio.autoplay = true;
+            audio.loop = true;
+            document.body.appendChild(audio);
+            
+            if (currentDate < unlockDate) {
+                document.body.innerHTML = "<h1 style='text-align: center; margin-top: 20%; color: red;'>Stranica još nije dostupna. Vrati se 14. veljače 2025. ❤️</h1>";
+                document.body.appendChild(audio); // Osiguraj da glazba svira
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- <audio autoplay loop>
+        <source src="/img/rivers.mp3" type="audio/mpeg">
+    </audio> -->
+    <h1>Sretno Valentinovo!</h1>
+    
+    <div class="gallery-wrapper">
+        <div class="gallery">
+            <img src="/img/1.jpg" alt="Slika 1">
+            <img src="/img/2.jpg" alt="Slika 2">
+            <img src="/img/3.jpg" alt="Slika 3">
+            <img src="/img/5.jpg" alt="Slika 4">
+            <img src="/img/6.jpg" alt="Slika 5">
+            <img src="/img/1.jpg" alt="Slika 1 - Kopija">
+            <img src="/img/2.jpg" alt="Slika 2 - Kopija">
+            <img src="/img/3.jpg" alt="Slika 3 - Kopija">
+            <img src="/img/5.jpg" alt="Slika 4 - Kopija">
+            <img src="/img/6.jpg" alt="Slika 5 - Kopija">
+        </div>
+    </div>
+    
+    <div class="moon-phases">
+        <h2>Mjesečeve faze</h2>
+        <img src="/img/moon12.png" alt="Mjesečeva faza 12.6.2023">
+        <p>Večer kada si mi poslala prvu poruku</p>
+        <img src="/img/moon15.png" alt="Mjesečeva faza 15.6.2023">
+        <p>Večer kada sam te vidio prvi put</p>
+        <img src="/img/moon17.png" alt="Mjesečeva faza 16.7.2023">
+        <p style="margin-bottom: 60px;">Dan kada sam postao najsretniji profesor na svijetu (i kad smo se prvi put seksali hehe)</p>
+    </div>
+    
+    <div class="love-text">
+        <p>Od tog 16. srpnja 2023., svaki dan je postao poseban. Možda se to čini kao "samo datum", ali za mene, taj dan je bio početak nečega što ne mogu ni riječima opisati. S tobom sam proveo mjesece ispunjene smijehom, sitnim svađama, pomirenjima, dugim razgovorima, lijepim trenucima i onima koji su nas oblikovali. Ponekad možda ne vidiš koliko sam sretan što te imam, koliko me usrećuješ samim time što si tu, ali svaka sekunda s tobom mi je neprocjenjiva.
+<br><br>
+            Nekad mislim da ti ne pokazujem dovoljno koliko mi značiš. Možda se ne izrazim uvijek kako treba, možda ponekad ne uspijem prenijeti što osjećam u tom trenutku, ali duboko u meni, svaki dan se zahvaljujem što imam tebe. Zajedno smo prošli kroz toliko toga, iako nam možda nije uvijek bilo lako, svaki izazov koji smo prošli samo je dodatno dokazao koliko smo jaki zajedno.
+            <br><br>
+            Gledam na protekle mjesece i ne mogu vjerovati koliko smo toga već doživjeli. Vrijeme s tobom leti, a opet, svaki trenutak mi ostaje urezan kao da ga želim zapamtiti zauvijek. S tobom sam naučio što znači istinski se vezati za nekoga, biti uz nekoga bez obzira na sve, razumjeti i učiti jedno o drugome svaki dan. Svaka naša mala svađa, svaki nesporazum, sve to samo me podsjeća koliko mi je stalo do tebe, koliko mi znači tvoje mišljenje, tvoj pogled, tvoj dodir.
+            <br><br>
+            I zato, iako možda ne vidiš koliko sam sretan s tobom – znaj da jesam. I da nema ničega na ovom svijetu što bih mijenjao. Da mi ni jedan drugi život ne bi bio draži od ovog kojeg imam sada, s tobom. ❤️</p>
+    </div>
+    
+    <div class="gallery-wrapper">
+        <div class="gallery">
+            <img src="/img/4.jpg" alt="Slika 6">
+            <img src="/img/7.jpg" alt="Slika 7">
+            <img src="/img/8.jpg" alt="Slika 8">
+            <img src="/img/9.jpg" alt="Slika 9">
+            <img src="/img/10.jpg" alt="Slika 10">
+            <img src="/img/11.jpg" alt="Slika 11">
+            <img src="/img/4.jpg" alt="Slika 6 - Kopija">
+            <img src="/img/7.jpg" alt="Slika 7 - Kopija">
+            <img src="/img/8.jpg" alt="Slika 8 - Kopija">
+            <img src="/img/9.jpg" alt="Slika 9 - Kopija">
+            <img src="/img/10.jpg" alt="Slika 10 - Kopija">
+            <img src="/img/11.jpg" alt="Slika 11 - Kopija">
+        </div>
+    </div>
+    
+    <div class="love-text">
+        <p>Ana, teško je opisati koliko mi značiš. Toliko je stvari na tebi koje me svakog dana ostavljaju bez riječi. Tvoj osmijeh je najsvjetlija zvijezda mog svijeta – trenutak kada se nasmiješ, sve ostalo postaje nebitno. Kad me pogledaš tim predivnim očima, imam osjećaj da sam najsretniji čovjek na svijetu jer znam da si moja, i da sam ja tvoj.
+<br><br>
+            Tvoj glas, tvoj način govora, način na koji me pogledaš kad nešto radim krivo, kad se ljutiš pa svejedno vidiš da te volim – sve na tebi mi je neodoljivo. Kad te gledam, ne mogu vjerovati da si ovdje, uz mene, da si ti ona osoba koja mi znači više od svega. Volim tvoj miris, volim tvoj dodir, volim sve sitnice koje čine tebe – tvoj način razmišljanja, tvoj humor, tvoju nježnost.
+            <br><br>
+            S tobom se osjećam sigurno. Znam da je, dok si ti uz mene, sve u redu. Kad te zagrlim, osjećam kao da ništa drugo nije važno – da je cijeli svijet stao i da postojimo samo mi. Ti si ona koja me smiruje kad sam nervozan, koja me motivira da budem bolji, koja mi daje snagu i kad mislim da je više nemam.
+            <br><br>
+            Ne postoji dovoljno riječi da opišem koliko mi značiš. Ne postoji način da ti dovoljno zahvalim što si dio mog života. Znam da možda ne vidiš sebe onako kako te ja vidim, ali za mene si savršena – od prvog dana do danas, i zauvijek. ❤️</p>
+    </div>
+    
+    <div class="counter">
+        <p>Broj dana u vezi: <span id="daysCounter"></span></p>
+    </div>
+    
+    <div class="final-message">
+        <p>Znaš li od kuda je ova pjesma? ❤️</p>
+    </div>
+    
+    <script>
+        function countDays() {
+            const startDate = new Date("2023-07-16");
+            const currentDate = new Date();
+            const difference = Math.floor((currentDate - startDate) / (1000 * 60 * 60 * 24));
+            document.getElementById("daysCounter").textContent = difference;
+        }
+        countDays();
+    </script>
+</body>
+</html>
